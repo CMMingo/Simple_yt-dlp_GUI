@@ -1,6 +1,7 @@
 # yt-dlp GUI
 
 A simple and functional Python GUI for **yt-dlp**, allowing audio and video downloads from YouTube.
+There are 2 versions, using Tkinter or Qt (PySide) for different styles. Both have the exact same functionalities.
 
 ---
 
@@ -20,7 +21,7 @@ A simple and functional Python GUI for **yt-dlp**, allowing audio and video down
 
 - Python 3.8+
 - `yt-dlp` installed and in PATH
-- Standard Python libraries (tkinter, threading, subprocess, os, json, re, queue)
+- Standard Python libraries (tkinter, PySide6, threading, subprocess, os, json, re, queue, typing)
 
 Optional for creating standalone `.exe`:
 - `PyInstaller` (pip install pyinstaller)
@@ -33,7 +34,9 @@ Optional for creating standalone `.exe`:
 2. Ensure `yt-dlp` is installed and available in your system PATH.
 3. Run the GUI:
 ```bash
-python python_ytdlp_gui.py
+python ytdlp_qt_gui.py.py
+or
+python ytdlp_tkinter_gui.py.py
 ```
 
 ---
@@ -81,7 +84,9 @@ pip install pyinstaller
 ```
 2. Create a single-file, windowed executable:
 ```bash
-pyinstaller --onefile --windowed yt_dlp_gui.py
+pyinstaller --onefile --windowed ytdlp_qt_gui.py.py
+or
+pyinstaller --onefile --windowed ytdlp_tkinter_gui.py.py
 ```
 3. The `.exe` will appear in the `dist/` folder.
 
@@ -89,7 +94,9 @@ pyinstaller --onefile --windowed yt_dlp_gui.py
 - The `.exe` **does not bundle `yt-dlp`**. Users must have it installed separately or include a relative path.
 - If one wants to bundle the yt-dlp executable too:
   ```bash
-  pyinstaller --onefile --windowed python_ytdlp_gui.py --add-data "yt-dlp.exe;."
+  pyinstaller --onefile --windowed ytdlp_qt_gui.py --add-data "yt-dlp.exe;."
+  or
+  pyinstaller --onefile --windowed ytdlp_tkinter_gui.py --add-data "yt-dlp.exe;."
   ```
 
 ---
