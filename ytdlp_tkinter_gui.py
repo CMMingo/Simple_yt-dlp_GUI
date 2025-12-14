@@ -1,10 +1,10 @@
 """
-yt-dlp GUI – Final Stable & Fully Explained Version
+yt-dlp GUI – Tkinter version
 """
 
 
 # ==================================================
-# IMPORTS (ONLY STANDARD PYTHON LIBRARIES)
+# IMPORTS
 # ==================================================
 
 import subprocess                       # Run external programs (yt-dlp)
